@@ -1,0 +1,1289 @@
+[
+  {
+    "id": 1,
+    "nombre": "Advance Wars 1 plus 2 Re-Boot Camp",
+    "pesoGB": 6.66,
+    "categoria": "Nintendo",
+    "imagen": "/covers/advance-wars-1-plus-2-re-boot-camp.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 2,
+    "nombre": "Alan Wake Remastered",
+    "pesoGB": 12.97,
+    "categoria": "Otros",
+    "imagen": "/covers/alan-wake-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 3,
+    "nombre": "Animal Crossing New Horizons",
+    "pesoGB": 10.19,
+    "categoria": "RPG / Simulación",
+    "imagen": "/covers/animal-crossing-new-horizons.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 4,
+    "nombre": "ARMS",
+    "pesoGB": 3.23,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/arms.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 5,
+    "nombre": "Assassin's Creed: The Ezio Collection",
+    "pesoGB": 7.38,
+    "categoria": "Acción",
+    "imagen": "/covers/assassins-creed-the-ezio-collection.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 6,
+    "nombre": "Astral Chain",
+    "pesoGB": 9.82,
+    "categoria": "Acción",
+    "imagen": "/covers/astral-chain.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 7,
+    "nombre": "Barbie Dreamhouse Adventures",
+    "pesoGB": 1.64,
+    "categoria": "Plataformas",
+    "imagen": "/covers/barbie-dreamhouse-adventures.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 8,
+    "nombre": "Batman: Arkham Knight",
+    "pesoGB": 27.28,
+    "categoria": "Acción",
+    "imagen": "/covers/batman-arkham-knight.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 9,
+    "nombre": "Bayonetta Origins Cereza and the Lost Demon",
+    "pesoGB": 3.19,
+    "categoria": "Acción",
+    "imagen": "/covers/bayonetta-origins-cereza-and-the-lost-demon.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 10,
+    "nombre": "Ben 10 Power Trip",
+    "pesoGB": 1.71,
+    "categoria": "Plataformas",
+    "imagen": "/covers/ben-10-power-trip.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 11,
+    "nombre": "BioShock Remastered",
+    "pesoGB": 12.54,
+    "categoria": "Acción",
+    "imagen": "/covers/bioshock-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 12,
+    "nombre": "Blasphemous 2",
+    "pesoGB": 2.21,
+    "categoria": "Indie",
+    "imagen": "/covers/blasphemous-2.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 13,
+    "nombre": "Bluey The Videogame",
+    "pesoGB": 1.86,
+    "categoria": "Plataformas",
+    "imagen": "/covers/bluey-the-videogame.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 14,
+    "nombre": "Borderlands 3",
+    "pesoGB": 13.29,
+    "categoria": "Acción",
+    "imagen": "/covers/borderlands-3.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 15,
+    "nombre": "Bramble The Mountain King",
+    "pesoGB": 6.13,
+    "categoria": "Otros",
+    "imagen": "/covers/bramble-the-mountain-king.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 16,
+    "nombre": "Burnout Paradise Remastered",
+    "pesoGB": 3.99,
+    "categoria": "Otros",
+    "imagen": "/covers/burnout-paradise-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 17,
+    "nombre": "Captain Toad Treasure Tracker",
+    "pesoGB": 1.89,
+    "categoria": "Plataformas",
+    "imagen": "/covers/captain-toad-treasure-tracker.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 18,
+    "nombre": "Captain Tsubasa: Rise of New Champions",
+    "pesoGB": 13.67,
+    "categoria": "Deportes",
+    "imagen": "/covers/captain-tsubasa-rise-of-new-champions.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 19,
+    "nombre": "Casual Sport Series Tennis",
+    "pesoGB": 1.06,
+    "categoria": "Deportes",
+    "imagen": "/covers/casual-sport-series-tennis.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 20,
+    "nombre": "Crash Bandicoot 4 It's About Time",
+    "pesoGB": 9.35,
+    "categoria": "Plataformas",
+    "imagen": "/covers/crash-bandicoot-4-its-about-time.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 21,
+    "nombre": "Crash Bandicoot™ N. Sane Trilogy",
+    "pesoGB": 5.25,
+    "categoria": "Plataformas",
+    "imagen": "/covers/crash-bandicoot-n-sane-trilogy.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 22,
+    "nombre": "Crash™ Team Racing Nitro-Fueled",
+    "pesoGB": 5.76,
+    "categoria": "Plataformas",
+    "imagen": "/covers/crash-team-racing-nitro-fueled.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 23,
+    "nombre": "Crysis 2 Remastered",
+    "pesoGB": 11.53,
+    "categoria": "Acción",
+    "imagen": "/covers/crysis-2-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 24,
+    "nombre": "Cuphead",
+    "pesoGB": 5.11,
+    "categoria": "Indie",
+    "imagen": "/covers/cuphead.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 25,
+    "nombre": "Dark Souls Remastered",
+    "pesoGB": 3.97,
+    "categoria": "Otros",
+    "imagen": "/covers/dark-souls-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 26,
+    "nombre": "Dave the Diver",
+    "pesoGB": 4.11,
+    "categoria": "Indie",
+    "imagen": "/covers/dave-the-diver.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 27,
+    "nombre": "Detective Pikachu Returns",
+    "pesoGB": 9.0,
+    "categoria": "Otros",
+    "imagen": "/covers/detective-pikachu-returns.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 28,
+    "nombre": "Disco Elysium - The Final Cut",
+    "pesoGB": 7.8,
+    "categoria": "Indie",
+    "imagen": "/covers/disco-elysium-the-final-cut.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 29,
+    "nombre": "Disney Classic Games Aladdin and The Lion King",
+    "pesoGB": 3.18,
+    "categoria": "Otros",
+    "imagen": "/covers/disney-classic-games-aladdin-and-the-lion-king.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 30,
+    "nombre": "Disney Epic Mickey: Rebrushed",
+    "pesoGB": 11.7,
+    "categoria": "RPG / Simulación",
+    "imagen": "/covers/disney-epic-mickey-rebrushed.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 31,
+    "nombre": "Donkey Kong Country Returns HD",
+    "pesoGB": 14.88,
+    "categoria": "Nintendo",
+    "imagen": "/covers/donkey-kong-country-returns-hd.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 32,
+    "nombre": "Donkey Kong Country Tropical Freeze",
+    "pesoGB": 6.66,
+    "categoria": "Nintendo",
+    "imagen": "/covers/donkey-kong-country-tropical-freeze.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 33,
+    "nombre": "DOOM Eternal",
+    "pesoGB": 33.01,
+    "categoria": "Acción",
+    "imagen": "/covers/doom-eternal.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 34,
+    "nombre": "DRAGON BALL FighterZ",
+    "pesoGB": 9.67,
+    "categoria": "Acción",
+    "imagen": "/covers/dragon-ball-fighterz.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 35,
+    "nombre": "Dragon Ball Z: Kakarot",
+    "pesoGB": 21.3,
+    "categoria": "Acción",
+    "imagen": "/covers/dragon-ball-z-kakarot.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 36,
+    "nombre": "EA SPORTS FC 24",
+    "pesoGB": 32.43,
+    "categoria": "Deportes",
+    "imagen": "/covers/ea-sports-fc-24.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 37,
+    "nombre": "EA SPORTS FC 25",
+    "pesoGB": 12.52,
+    "categoria": "Deportes",
+    "imagen": "/covers/ea-sports-fc-25.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 38,
+    "nombre": "EA SPORTS FC 26",
+    "pesoGB": 30.95,
+    "categoria": "Deportes",
+    "imagen": "/covers/ea-sports-fc-26.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 39,
+    "nombre": "Everybody 1-2-Switch!",
+    "pesoGB": 3.35,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/everybody-1-2-switch.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 40,
+    "nombre": "Fitness Boxing 2 Rhythm",
+    "pesoGB": 2.33,
+    "categoria": "Deportes",
+    "imagen": "/covers/fitness-boxing-2-rhythm.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 41,
+    "nombre": "Fitness Boxing Fist of the North StaR",
+    "pesoGB": 2.85,
+    "categoria": "Deportes",
+    "imagen": "/covers/fitness-boxing-fist-of-the-north-star.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 42,
+    "nombre": "Funko Fusion",
+    "pesoGB": 11.32,
+    "categoria": "Acción",
+    "imagen": "/covers/funko-fusion.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 43,
+    "nombre": "Grand Theft Auto San Andreas - The Definitive Edition",
+    "pesoGB": 17.13,
+    "categoria": "Acción",
+    "imagen": "/covers/grand-theft-auto-san-andreas-the-definitive-edition.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 44,
+    "nombre": "GRIS",
+    "pesoGB": 0.14,
+    "categoria": "Indie",
+    "imagen": "/covers/gris.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 45,
+    "nombre": "Hello Neighbor Hide and Seek",
+    "pesoGB": 2.42,
+    "categoria": "Otros",
+    "imagen": "/covers/hello-neighbor-hide-and-seek.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 46,
+    "nombre": "Hogwarts Legacy",
+    "pesoGB": 15.09,
+    "categoria": "Acción",
+    "imagen": "/covers/hogwarts-legacy.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 47,
+    "nombre": "Hollow Knight",
+    "pesoGB": 5.29,
+    "categoria": "Indie",
+    "imagen": "/covers/hollow-knight.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 48,
+    "nombre": "Hollow Knight: Silksong",
+    "pesoGB": 2.79,
+    "categoria": "Indie",
+    "imagen": "/covers/hollow-knight-silksong.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 49,
+    "nombre": "Hyrule Warriors Age of Calamity",
+    "pesoGB": 11.07,
+    "categoria": "Zelda",
+    "imagen": "/covers/hyrule-warriors-age-of-calamity.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 50,
+    "nombre": "Hyrule Warriors Definitive Edition",
+    "pesoGB": 12.92,
+    "categoria": "Zelda",
+    "imagen": "/covers/hyrule-warriors-definitive-edition.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 51,
+    "nombre": "It Takes Two",
+    "pesoGB": 12.13,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/it-takes-two.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 52,
+    "nombre": "Jujutsu Kaisen Cursed Clash",
+    "pesoGB": 6.07,
+    "categoria": "Otros",
+    "imagen": "/covers/jujutsu-kaisen-cursed-clash.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 53,
+    "nombre": "JUMP FORCE Deluxe Edition",
+    "pesoGB": 11.35,
+    "categoria": "Otros",
+    "imagen": "/covers/jump-force-deluxe-edition.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 54,
+    "nombre": "JUST DANCE® 2022",
+    "pesoGB": 6.87,
+    "categoria": "Baile",
+    "imagen": "/covers/just-dance-2022.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 55,
+    "nombre": "Kirby and the Forgotten Land",
+    "pesoGB": 5.75,
+    "categoria": "Nintendo",
+    "imagen": "/covers/kirby-and-the-forgotten-land.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 56,
+    "nombre": "Kirby's Return to Dream Land Deluxe",
+    "pesoGB": 5.0,
+    "categoria": "Nintendo",
+    "imagen": "/covers/kirbys-return-to-dream-land-deluxe.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 57,
+    "nombre": "LEGO Horizon Adventures",
+    "pesoGB": 7.26,
+    "categoria": "LEGO",
+    "imagen": "/covers/lego-horizon-adventures.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 58,
+    "nombre": "LEGO Star Wars The Skywalker Saga",
+    "pesoGB": 17.61,
+    "categoria": "LEGO",
+    "imagen": "/covers/lego-star-wars-the-skywalker-saga.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 59,
+    "nombre": "LEGO Worlds",
+    "pesoGB": 2.93,
+    "categoria": "LEGO",
+    "imagen": "/covers/lego-worlds.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 60,
+    "nombre": "Little Nightmares Complete Edition",
+    "pesoGB": 3.05,
+    "categoria": "Indie",
+    "imagen": "/covers/little-nightmares-complete-edition.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 61,
+    "nombre": "Luigi's Mansion 2 HD",
+    "pesoGB": 3.72,
+    "categoria": "Nintendo",
+    "imagen": "/covers/luigis-mansion-2-hd.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 62,
+    "nombre": "Luigi's Mansion 3",
+    "pesoGB": 7.71,
+    "categoria": "Nintendo",
+    "imagen": "/covers/luigis-mansion-3.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 63,
+    "nombre": "Mario & Luigi Brothership",
+    "pesoGB": 9.85,
+    "categoria": "Nintendo",
+    "imagen": "/covers/mario-luigi-brothership.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 64,
+    "nombre": "Mario & Sonic at the Olympic Games Tokyo 2020",
+    "pesoGB": 6.4,
+    "categoria": "Nintendo",
+    "imagen": "/covers/mario-sonic-at-the-olympic-games-tokyo-2020.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 65,
+    "nombre": "Mario + Rabbids Kingdom Battle",
+    "pesoGB": 3.37,
+    "categoria": "Nintendo",
+    "imagen": "/covers/mario-rabbids-kingdom-battle.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 66,
+    "nombre": "Mario + Rabbids Sparks of Hope",
+    "pesoGB": 8.9,
+    "categoria": "Nintendo",
+    "imagen": "/covers/mario-rabbids-sparks-of-hope.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 67,
+    "nombre": "Mario Golf Super Rush",
+    "pesoGB": 2.86,
+    "categoria": "Deportes",
+    "imagen": "/covers/mario-golf-super-rush.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 68,
+    "nombre": "Mario Kart 8 Deluxe",
+    "pesoGB": 11.24,
+    "categoria": "Deportes",
+    "imagen": "/covers/mario-kart-8-deluxe.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 69,
+    "nombre": "Mario Kart Live: Home Circuit",
+    "pesoGB": 1.96,
+    "categoria": "Deportes",
+    "imagen": "/covers/mario-kart-live-home-circuit.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 70,
+    "nombre": "Mario Strikers Battle League",
+    "pesoGB": 2.77,
+    "categoria": "Deportes",
+    "imagen": "/covers/mario-strikers-battle-league.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 71,
+    "nombre": "Mario Tennis Aces",
+    "pesoGB": 1.86,
+    "categoria": "Deportes",
+    "imagen": "/covers/mario-tennis-aces.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 72,
+    "nombre": "Mario vs. Donkey Kong",
+    "pesoGB": 1.3,
+    "categoria": "Nintendo",
+    "imagen": "/covers/mario-vs-donkey-kong.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 73,
+    "nombre": "Marvel vs. Capcom Fighting Collection: Arcade Classics",
+    "pesoGB": 3.16,
+    "categoria": "Otros",
+    "imagen": "/covers/marvel-vs-capcom-fighting-collection-arcade-classics.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 74,
+    "nombre": "Metal Gear Solid: Master Collection",
+    "pesoGB": 9.54,
+    "categoria": "Acción",
+    "imagen": "/covers/metal-gear-solid-master-collection.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 75,
+    "nombre": "Metroid Dread",
+    "pesoGB": 4.27,
+    "categoria": "Nintendo",
+    "imagen": "/covers/metroid-dread.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 76,
+    "nombre": "Metroid Prime REMASTERED",
+    "pesoGB": 6.76,
+    "categoria": "Nintendo",
+    "imagen": "/covers/metroid-prime-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 77,
+    "nombre": "Minecraft",
+    "pesoGB": 1.37,
+    "categoria": "Aventura",
+    "imagen": "/covers/minecraft.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 78,
+    "nombre": "Minecraft Legends",
+    "pesoGB": 7.34,
+    "categoria": "Aventura",
+    "imagen": "/covers/minecraft-legends.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 79,
+    "nombre": "Monster Hunter Rise",
+    "pesoGB": 26.32,
+    "categoria": "Acción",
+    "imagen": "/covers/monster-hunter-rise.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 80,
+    "nombre": "Mortal Kombat 1",
+    "pesoGB": 36.12,
+    "categoria": "Acción",
+    "imagen": "/covers/mortal-kombat-1.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 81,
+    "nombre": "Motorbikes Pro 2025",
+    "pesoGB": 0.34,
+    "categoria": "Deportes",
+    "imagen": "/covers/motorbikes-pro-2025.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 82,
+    "nombre": "Naruto x Boruto: Ultimate Ninja Storm",
+    "pesoGB": 14.12,
+    "categoria": "Acción",
+    "imagen": "/covers/naruto-x-boruto-ultimate-ninja-storm.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 83,
+    "nombre": "Need For Speed™ Hot Pursuit Remastered",
+    "pesoGB": 8.14,
+    "categoria": "Acción",
+    "imagen": "/covers/need-for-speed-hot-pursuit-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 84,
+    "nombre": "New Pokemon Snap",
+    "pesoGB": 7.31,
+    "categoria": "Pokémon",
+    "imagen": "/covers/new-pokemon-snap.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 85,
+    "nombre": "New Super Mario Bros U Deluxe",
+    "pesoGB": 2.5,
+    "categoria": "Nintendo",
+    "imagen": "/covers/new-super-mario-bros-u-deluxe.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 86,
+    "nombre": "NieRAutomata The End of YoRHa Edition",
+    "pesoGB": 11.27,
+    "categoria": "Acción",
+    "imagen": "/covers/nierautomata-the-end-of-yorha-edition.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 87,
+    "nombre": "Nintendo Switch Sports",
+    "pesoGB": 3.01,
+    "categoria": "Deportes",
+    "imagen": "/covers/nintendo-switch-sports.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 88,
+    "nombre": "Overcooked All You Can Eat",
+    "pesoGB": 15.52,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/overcooked-all-you-can-eat.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 89,
+    "nombre": "PAC-MAN WORLD Re-PAC",
+    "pesoGB": 4.73,
+    "categoria": "Otros",
+    "imagen": "/covers/pac-man-world-re-pac.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 90,
+    "nombre": "Palia",
+    "pesoGB": 10.29,
+    "categoria": "Indie",
+    "imagen": "/covers/palia.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 91,
+    "nombre": "Paper Mario The Origami King",
+    "pesoGB": 6.46,
+    "categoria": "Nintendo",
+    "imagen": "/covers/paper-mario-the-origami-king.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 92,
+    "nombre": "Persona 5 Royal",
+    "pesoGB": 14.22,
+    "categoria": "RPG / Simulación",
+    "imagen": "/covers/persona-5-royal.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 93,
+    "nombre": "Pikmin 4",
+    "pesoGB": 10.36,
+    "categoria": "Nintendo",
+    "imagen": "/covers/pikmin-4.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 94,
+    "nombre": "Pokémon Brilliant Diamond",
+    "pesoGB": 6.85,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-brilliant-diamond.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 95,
+    "nombre": "Pokémon Legends: Arceus",
+    "pesoGB": 6.1,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-legends-arceus.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 96,
+    "nombre": "Pokémon Scarlet",
+    "pesoGB": 11.15,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-scarlet.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 97,
+    "nombre": "Pokémon Shining Pearl",
+    "pesoGB": 6.84,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-shining-pearl.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 98,
+    "nombre": "Pokémon Violet",
+    "pesoGB": 6.27,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-violet.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 99,
+    "nombre": "Pokkén Tournament DX",
+    "pesoGB": 4.03,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pokk-n-tournament-dx.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 100,
+    "nombre": "Pokémon Let’s Go, Eevee!",
+    "pesoGB": 4.19,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-let-s-go-eevee.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 101,
+    "nombre": "Pokémon Let’s Go, Pikachu!",
+    "pesoGB": 4.19,
+    "categoria": "Pokémon",
+    "imagen": "/covers/pok-mon-let-s-go-pikachu.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 102,
+    "nombre": "Poppy Playtime Chapter 4",
+    "pesoGB": 2.68,
+    "categoria": "Indie",
+    "imagen": "/covers/poppy-playtime-chapter-4.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 103,
+    "nombre": "Portal",
+    "pesoGB": 2.67,
+    "categoria": "Indie",
+    "imagen": "/covers/portal.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 104,
+    "nombre": "Prince of Persia The Lost Crown",
+    "pesoGB": 7.97,
+    "categoria": "Acción",
+    "imagen": "/covers/prince-of-persia-the-lost-crown.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 105,
+    "nombre": "Princess Peach Showtime!",
+    "pesoGB": 7.44,
+    "categoria": "Nintendo",
+    "imagen": "/covers/princess-peach-showtime.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 106,
+    "nombre": "Red Dead Redemption",
+    "pesoGB": 11.64,
+    "categoria": "Acción",
+    "imagen": "/covers/red-dead-redemption.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 107,
+    "nombre": "Resident Evil 6",
+    "pesoGB": 17.51,
+    "categoria": "Acción",
+    "imagen": "/covers/resident-evil-6.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 108,
+    "nombre": "Ring Fit Adventure",
+    "pesoGB": 3.31,
+    "categoria": "Deportes",
+    "imagen": "/covers/ring-fit-adventure.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 109,
+    "nombre": "SnowRunner",
+    "pesoGB": 13.63,
+    "categoria": "Otros",
+    "imagen": "/covers/snowrunner.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 110,
+    "nombre": "Sonic Frontiers",
+    "pesoGB": 15.27,
+    "categoria": "Acción",
+    "imagen": "/covers/sonic-frontiers.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 111,
+    "nombre": "Sonic Superstars",
+    "pesoGB": 4.12,
+    "categoria": "Acción",
+    "imagen": "/covers/sonic-superstars.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 112,
+    "nombre": "SONIC X SHADOW GENERATIONS",
+    "pesoGB": 14.39,
+    "categoria": "Acción",
+    "imagen": "/covers/sonic-x-shadow-generations.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 113,
+    "nombre": "Splatoon 3",
+    "pesoGB": 3.09,
+    "categoria": "Nintendo",
+    "imagen": "/covers/splatoon-3.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 114,
+    "nombre": "SpongeBob SquarePants: Battle for Bikini Bottom",
+    "pesoGB": 12.74,
+    "categoria": "Plataformas",
+    "imagen": "/covers/spongebob-squarepants-battle-for-bikini-bottom.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 115,
+    "nombre": "Spyro Reignited Trilogy",
+    "pesoGB": 15.07,
+    "categoria": "Plataformas",
+    "imagen": "/covers/spyro-reignited-trilogy.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 116,
+    "nombre": "Super Bomberman R",
+    "pesoGB": 4.42,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/super-bomberman-r.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 117,
+    "nombre": "Super Mario 3D All-Stars",
+    "pesoGB": 4.91,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-3d-all-stars.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 118,
+    "nombre": "Super Mario 3D World + Bowser's Fury",
+    "pesoGB": 2.96,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-3d-world-bowsers-fury.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 119,
+    "nombre": "Super Mario Galaxy 2",
+    "pesoGB": 2.84,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-galaxy-2.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 120,
+    "nombre": "Super Mario Maker 2",
+    "pesoGB": 3.05,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-maker-2.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 121,
+    "nombre": "Super Mario Odyssey",
+    "pesoGB": 5.78,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-odyssey.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 122,
+    "nombre": "Super Mario Party",
+    "pesoGB": 2.89,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-party.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 123,
+    "nombre": "Super Mario Party Jamboree",
+    "pesoGB": 5.32,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-party-jamboree.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 124,
+    "nombre": "Super Mario RPG",
+    "pesoGB": 6.52,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-rpg.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 125,
+    "nombre": "Super Mario Bros. Wonder",
+    "pesoGB": 3.56,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-bros-wonder.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 126,
+    "nombre": "Super Smash Bros. Ultimate",
+    "pesoGB": 13.63,
+    "categoria": "Multiplayer",
+    "imagen": "/covers/super-smash-bros-ultimate.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 127,
+    "nombre": "Super Mario Galaxy",
+    "pesoGB": 3.67,
+    "categoria": "Nintendo",
+    "imagen": "/covers/super-mario-galaxy.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 128,
+    "nombre": "Teenage Mutant Ninja Turtles Splintered Fate",
+    "pesoGB": 2.24,
+    "categoria": "Plataformas",
+    "imagen": "/covers/teenage-mutant-ninja-turtles-splintered-fate.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 129,
+    "nombre": "The Elder Scrolls V Skyrim",
+    "pesoGB": 14.53,
+    "categoria": "Acción",
+    "imagen": "/covers/the-elder-scrolls-v-skyrim.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 130,
+    "nombre": "The King of Fighters XIII",
+    "pesoGB": 2.95,
+    "categoria": "Otros",
+    "imagen": "/covers/the-king-of-fighters-xiii.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 131,
+    "nombre": "The Legend of Zelda Breath of the Wild",
+    "pesoGB": 15.71,
+    "categoria": "Zelda",
+    "imagen": "/covers/the-legend-of-zelda-breath-of-the-wild.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 132,
+    "nombre": "The Legend of Zelda Echoes of Wisdom",
+    "pesoGB": 5.58,
+    "categoria": "Zelda",
+    "imagen": "/covers/the-legend-of-zelda-echoes-of-wisdom.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 133,
+    "nombre": "The Legend of Zelda Skyward Sword HD",
+    "pesoGB": 7.07,
+    "categoria": "Zelda",
+    "imagen": "/covers/the-legend-of-zelda-skyward-sword-hd.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 134,
+    "nombre": "The Smurfs 2 - The Prisoner of the Green Stone",
+    "pesoGB": 3.37,
+    "categoria": "Plataformas",
+    "imagen": "/covers/the-smurfs-2-the-prisoner-of-the-green-stone.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 135,
+    "nombre": "The Walking Dead Destinies",
+    "pesoGB": 7.09,
+    "categoria": "Otros",
+    "imagen": "/covers/the-walking-dead-destinies.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 136,
+    "nombre": "The Witcher 3 Wild Hunt",
+    "pesoGB": 24.31,
+    "categoria": "Acción",
+    "imagen": "/covers/the-witcher-3-wild-hunt.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 137,
+    "nombre": "The Wonderful 101 Remastered",
+    "pesoGB": 8.65,
+    "categoria": "Acción",
+    "imagen": "/covers/the-wonderful-101-remastered.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 138,
+    "nombre": "Tinykin",
+    "pesoGB": 2.31,
+    "categoria": "Indie",
+    "imagen": "/covers/tinykin.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 139,
+    "nombre": "Vigor",
+    "pesoGB": 6.36,
+    "categoria": "Otros",
+    "imagen": "/covers/vigor.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 140,
+    "nombre": "WarioWare Move It!",
+    "pesoGB": 1.31,
+    "categoria": "Nintendo",
+    "imagen": "/covers/warioware-move-it.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 141,
+    "nombre": "World War Z",
+    "pesoGB": 11.29,
+    "categoria": "Acción",
+    "imagen": "/covers/world-war-z.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 142,
+    "nombre": "Xenoblade Chronicles 3",
+    "pesoGB": 18.75,
+    "categoria": "Acción",
+    "imagen": "/covers/xenoblade-chronicles-3.jpg",
+    "favorito": false,
+    "nuevo": false
+  },
+  {
+    "id": 143,
+    "nombre": "The Legend of Zelda: Tears of the Kingdom",
+    "pesoGB": 16.77,
+    "categoria": "Zelda",
+    "imagen": "/covers/the-legend-of-zelda-tears-of-the-kingdom.jpg",
+    "favorito": false,
+    "nuevo": false
+  }
+]
