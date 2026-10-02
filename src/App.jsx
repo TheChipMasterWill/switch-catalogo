@@ -1,19 +1,40 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import juegos from "./data/juegos.json";
-import { accesorios, configuracionTienda, combos, memorias } from "./data/catalogo";
+import { configuracionTienda, combos, memorias } from "./data/catalogo";
+import { productos, productosDisponibles, categoriasTienda } from "./data/productos";
+import { construirPedido } from "./utils/pedido";
+
+function enlaceConsulta(producto) {
+  const telefono = configuracionTienda.whatsapp.replace(/\D/g, "");
+  const mensaje = `Hola, quisiera consultar el precio y la disponibilidad de ${producto.nombre} (${producto.condicion}) en ${configuracionTienda.nombre}.`;
+  return `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+}
 
 const dinero = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
 
 function App() {
+  const [pagina, setPagina] = useState(() => window.location.hash.startsWith("#/catalogo") ? "catalogo" : "tienda");
+  const esCatalogo = pagina === "catalogo";
+  useEffect(() => {
+    function actualizarPagina() {
+      setPagina(window.location.hash.startsWith("#/catalogo") ? "catalogo" : "tienda");
+      window.scrollTo(0, 0);
+    }
+    window.addEventListener("hashchange", actualizarPagina);
+    return () => window.removeEventListener("hashchange", actualizarPagina);
+  }, []);
+  useEffect(() => {
+    document.title = esCatalogo ? "Catálogo de juegos | TheChipMaster" : "Tienda TheChipMaster";
+  }, [esCatalogo]);
   const [combo, setCombo] = useState(null);
   const [memoria, setMemoria] = useState(null);
   const [seleccionados, setSeleccionados] = useState([]);
   const [carrito, setCarrito] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [categoria, setCategoria] = useState("Todos");
+  const [categoriaTienda, setCategoriaTienda] = useState("Todos");
   const [carritoAbierto, setCarritoAbierto] = useState(false);
-
   const capacidadGB = memoria?.capacidadGB || 0;
   const pesoTotal = seleccionados.reduce((total, juego) => total + juego.pesoGB, 0);
   const limiteJuegos = combo?.cantidad || 0;
@@ -41,12 +62,10 @@ function App() {
   const juegosFiltrados = useMemo(() => juegos.filter((juego) =>
     juego.nombre.toLowerCase().includes(busqueda.toLowerCase()) && (categoria === "Todos" || juego.categoria === categoria)
   ), [busqueda, categoria]);
-
-  const articulosPedido = [
-    ...(combo ? [{ id: `combo-${combo.id}`, nombre: combo.nombre, precio: combo.precio, cantidad: 1, detalle: combo.cantidad ? `${seleccionados.length}/${combo.cantidad} juegos` : undefined }] : []),
-    ...(memoria ? [{ id: `memoria-${memoria.id}`, nombre: memoria.nombre, precio: memoria.precio, cantidad: 1 }] : []),
-    ...carrito,
-  ];
+  const productosFiltrados = useMemo(() => productosDisponibles.filter((producto) =>
+    categoriaTienda === "Todos" || producto.categoria === categoriaTienda
+  ), [categoriaTienda]);
+  const articulosPedido = construirPedido({ combo, memoria, seleccionados, carrito, productos });
   const total = articulosPedido.reduce((suma, item) => suma + item.precio * item.cantidad, 0);
 
   function toggleJuego(juego) {
@@ -67,11 +86,12 @@ function App() {
   }
 
   function agregarAlCarrito(producto) {
+    if (producto.disponible !== true || !(producto.precio > 0)) return;
     setCarrito((actual) => {
       const encontrado = actual.find((item) => item.id === producto.id);
       return encontrado
         ? actual.map((item) => item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item)
-        : [...actual, { ...producto, cantidad: 1 }];
+        : [...actual, { id: producto.id, cantidad: 1 }];
     });
     setCarritoAbierto(true);
   }
@@ -84,23 +104,47 @@ function App() {
   }
 
   function enviarWhatsApp() {
-    if (!articulosPedido.length) return window.alert("Agrega un combo, memoria o accesorio antes de enviar tu pedido.");
-    const lineas = articulosPedido.map((item) => `• ${item.nombre}${item.detalle ? ` (${item.detalle})` : ""} × ${item.cantidad} — ${dinero.format(item.precio * item.cantidad)}`);
+  if (!articulosPedido.length) {
+    return window.alert("Agrega al menos un producto o servicio antes de enviar tu pedido.");
+  }
+  const lineas = articulosPedido.map((item) => `• ${item.nombre}${item.condicion ? ` (${item.condicion})` : ""}${item.detalle ? ` (${item.detalle})` : ""} × ${item.cantidad} — ${dinero.format(item.precio * item.cantidad)}`);
     if (seleccionados.length) lineas.push("\nJuegos seleccionados:\n" + seleccionados.map((juego) => `• ${juego.nombre} (${juego.pesoGB} GB)`).join("\n"));
     const mensaje = `Hola, quiero hacer este pedido en ${configuracionTienda.nombre}:\n\n${lineas.join("\n")}\n\n*Total: ${dinero.format(total)}*\n\n¿Me confirmas disponibilidad?`;
     const telefono = configuracionTienda.whatsapp.replace(/\D/g, "");
-    window.open(`https://wa.me/${telefono ? telefono + "?" : "?"}text=${encodeURIComponent(mensaje)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank", "noopener,noreferrer");
   }
 
   return <main>
     <header className="hero" id="inicio">
-      <nav><a className="brand" href="#inicio"><span>◉</span> TheChipMaster</a><div className="nav-links"><a href="#arma-tu-combo">Combos</a><a href="#accesorios">Accesorios</a><button className="cart-link" onClick={() => setCarritoAbierto(true)}>Carrito <b>{carrito.reduce((s, i) => s + i.cantidad, 0)}</b></button></div></nav>
-      <div className="hero-content"><p className="eyebrow">Nintendo Switch · Bogotá</p><h1>Tu Switch, llevada<br />al siguiente nivel.</h1><p>Arma tu combo de juegos, elige tu memoria y completa tu setup con accesorios.</p><a className="primary-button" href="#arma-tu-combo">Escoge tu magia <span>→</span></a></div>
+      <nav aria-label="Navegación principal">
+        <a className="brand" href="#/" aria-label="TheChipMaster — Inicio">
+          <span className="brand-icon" aria-hidden="true">◉</span>
+          <span className="brand-name" aria-hidden="true">
+            {Array.from("TheChipMaster").map((letter, index) => <span className="brand-letter" key={index}>{letter}</span>)}
+          </span>
+        </a>
+        <div className="nav-links">
+          <a href="#/catalogo" aria-current={esCatalogo ? "page" : undefined}>Catálogo de juegos</a>
+          <a href="#/" aria-current={!esCatalogo ? "page" : undefined}>Tienda</a>
+          <a className="youtube-button" href="https://www.youtube.com/@TheChipMasterWO" target="_blank" rel="noopener noreferrer" aria-label="TheChipMaster en YouTube (abre en una pestaña nueva)">
+            <svg width="22" height="16" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23 3a3 3 0 0 0-2-2C18 0 6 0 3 1a3 3 0 0 0-2 2C0 6 0 12 1 15a3 3 0 0 0 2 2c3 1 15 1 18 0a3 3 0 0 0 2-2c1-3 1-9 0-12Z" /><path d="m10 5 6 4-6 4Z" fill="#b90016" /></svg>
+            YouTube <span aria-hidden="true">↗</span>
+          </a>
+          <button className="cart-link" onClick={() => setCarritoAbierto(true)}>Carrito <b>{carrito.reduce((s, i) => s + i.cantidad, 0)}</b></button>
+        </div>
+      </nav>
+      <div className="hero-content">
+        <p className="eyebrow">Nintendo Switch · Bogotá</p>
+        <h1>{esCatalogo ? "Catálogo de juegos" : "Tienda TheChipMaster"}</h1>
+        <p>{esCatalogo ? "Escoge tu combo y tu memoria, y elige los juegos para tu Switch." : "Encuentra consolas, controles y accesorios para llevar tu Switch al siguiente nivel."}</p>
+        <a className="primary-button" href={esCatalogo ? "#arma-tu-combo" : "#tienda"}>{esCatalogo ? "Escoge tu magia" : "Explora la tienda"} <span>↓</span></a>
+      </div>
       <div className="hero-orb orb-one" /><div className="hero-orb orb-two" />
     </header>
 
     <section className="benefits"><p>✓ Atención personalizada</p><p>✓ Pedido directo por WhatsApp</p><p>✓ Catálogo siempre actualizado</p></section>
 
+    {esCatalogo ? <>
     <section className="section" id="arma-tu-combo">
       <div className="section-heading"><p className="eyebrow">Paso a paso</p><h2>Escoge tu magia</h2><p>Compra solo juegos si ya tienes magia, solo magia o la combinación que prefieras.</p></div>
       <div className="selector-grid"><Selector titulo="1. Escoge magia y juegos" opciones={combos} valor={combo?.id} alCambiar={seleccionarCombo} /> <Selector titulo="2. ¿Quieres microSD?" opciones={memorias} valor={memoria?.id} alCambiar={setMemoria} alOmitir={() => setMemoria(null)} textoOmitir="No, ya tengo microSD" /></div>
@@ -116,10 +160,60 @@ function App() {
       const motivoBloqueo = combo && !combo.cantidad ? "Sin juegos" : comboLleno ? "Combo lleno" : "Sin espacio";
       return <GameCard key={juego.id} juego={juego} seleccionado={seleccionado} onToggle={toggleJuego} bloqueado={bloqueado} motivoBloqueo={motivoBloqueo} />;
     })}</div></section>
+    </> : <>
+    <section className="section store-section" id="tienda">
+      <div className="section-heading">
+        <p className="eyebrow">Tienda TheChipMaster</p>
+        <h2>Consolas, controles y accesorios</h2>
+        <p>
+          Encuentra consolas nuevas y de segunda mano, controles,
+          almacenamiento y accesorios para tu setup.
+        </p>
+      </div>
 
-    <section className="section accessories" id="accesorios"><div className="section-heading"><p className="eyebrow">Completa tu pedido</p><h2>Accesorios para tu Switch</h2><p>Agrega lo que necesites a tu carrito.</p></div><div className="accessories-grid">{accesorios.map((producto) => <article className="accessory-card" key={producto.id}><span className="accessory-icon">{producto.icono}</span><p>{producto.categoria}</p><h3>{producto.nombre}</h3><strong>{dinero.format(producto.precio)}</strong><button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button></article>)}</div></section>
+      <div className="store-filters">
+       {categoriasTienda.map((item) => (
+         <button
+           key={item}
+           onClick={() => setCategoriaTienda(item)}
+           aria-pressed={categoriaTienda === item}
+           className={categoriaTienda === item ? "active" : ""}
+         >
+           {item}
+         </button>
+      ))}
+    </div>
 
-    {(combo || memoria) && <div className={`mobile-status ${juegosAlLimite || gbAlLimite ? "danger" : juegosCerca || gbCerca ? "warn" : ""}`} aria-live="polite"><span><b>{seleccionados.length} / {combo?.cantidad || 0}</b> juegos</span><span><b>{pesoTotal.toFixed(1)} / {capacidadGB || 0}</b> GB</span></div>}
+    <div className="products-grid">
+      {productosFiltrados.map((producto) => (
+        <ProductCard
+          key={producto.id}
+          producto={producto}
+          onAdd={() => agregarAlCarrito(producto)}
+        />
+      ))}
+    </div>
+
+    {!productosFiltrados.length && (
+      <div className="empty-store">
+        <h3>Próximamente</h3>
+        <p>
+          Estamos actualizando nuestro inventario.
+          Escríbenos por WhatsApp para consultar disponibilidad.
+      </p>
+    </div>
+   )}
+ </section>
+
+
+    <section className="catalog-entry section">
+      <p className="eyebrow">Juegos para tu Switch</p>
+      <h2>Arma tu combo de juegos</h2>
+      <p>Explora los juegos disponibles y escoge tu magia y tu memoria en nuestro catálogo.</p>
+      <a className="primary-button" href="#/catalogo">Ver catálogo de juegos <span>→</span></a>
+    </section>
+    </>}
+    {esCatalogo && (combo || memoria) && <div className={`mobile-status ${juegosAlLimite || gbAlLimite ? "danger" : juegosCerca || gbCerca ? "warn" : ""}`} aria-live="polite"><span><b>{seleccionados.length} / {combo?.cantidad || 0}</b> juegos</span><span><b>{pesoTotal.toFixed(1)} / {capacidadGB || 0}</b> GB</span></div>}
     <button className="floating-cart" onClick={() => setCarritoAbierto(true)}>🛒 <span>{carrito.reduce((s, i) => s + i.cantidad, 0)}</span></button>
     {carritoAbierto && <CartDrawer items={articulosPedido} accesorios={carrito} total={total} onClose={() => setCarritoAbierto(false)} onChange={cambiarCantidad} onWhatsApp={enviarWhatsApp} />}
     <footer>CHIPMASTER · Tu tienda Nintendo Switch</footer>
@@ -133,5 +227,57 @@ function LimitAlerts({ juegos, gb }) {
   return <div className={`limit-alerts ${peligro ? "danger" : "warn"}`} role="status">{juegos && <p>{juegos}</p>}{gb && <p>{gb}</p>}</div>;
 }
 function GameCard({ juego, seleccionado, onToggle, bloqueado, motivoBloqueo }) { return <article className={`game-card ${seleccionado ? "selected-card" : ""} ${bloqueado ? "blocked-card" : ""}`}><img src={`${import.meta.env.BASE_URL}${juego.imagen.replace(/^\//, "")}`} alt={`Portada de ${juego.nombre}`} /><div><span>{juego.categoria}</span><h3>{juego.nombre}</h3><p>{juego.pesoGB} GB</p><button onClick={() => onToggle(juego)} disabled={bloqueado}>{seleccionado ? "✓ En mi combo" : bloqueado ? motivoBloqueo : "Agregar al combo"}</button></div></article>; }
-function CartDrawer({ items, accesorios, total, onClose, onChange, onWhatsApp }) { return <div className="drawer-backdrop" onClick={onClose}><aside className="cart-drawer" onClick={(e) => e.stopPropagation()}><button className="close" onClick={onClose}>×</button><p className="eyebrow">Tu pedido</p><h2>Carrito</h2>{items.length ? <><div className="cart-items">{items.map((item) => <div className="cart-item" key={item.id}><div><strong>{item.nombre}</strong>{item.detalle && <small>{item.detalle}</small>}<span>{dinero.format(item.precio * item.cantidad)}</span></div>{accesorios.some((a) => a.id === item.id) && <div className="quantity"><button onClick={() => onChange(item.id, -1)}>−</button><b>{item.cantidad}</b><button onClick={() => onChange(item.id, 1)}>+</button></div>}</div>)}</div><div className="cart-total"><span>Total</span><strong>{dinero.format(total)}</strong></div><button className="whatsapp-button" onClick={onWhatsApp}>WhatsApp Business <span>↗</span></button></> : <p className="empty">Todavía no has agregado productos.</p>}<small className="availability">El pedido queda sujeto a confirmación de disponibilidad.</small></aside></div>; }
+function ProductCard({ producto, onAdd }) {
+  const [imagenFallida, setImagenFallida] = useState(false);
+  return (
+    <article className="product-card">
+      <div className="product-image">
+        {producto.imagen && !imagenFallida ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${producto.imagen.replace(/^\/+/, "")}`}
+            alt={producto.nombre}
+            loading="lazy"
+            onError={() => setImagenFallida(true)}
+          />
+        ) : (
+          <span role="img" aria-label="Producto sin fotografía">🎮</span>
+        )}
+      </div>
+
+      <div className="product-info">
+        <span className="product-category">
+          {producto.categoria}
+        </span>
+
+        <h3>{producto.nombre}</h3>
+
+        <p className="product-condition">
+          {producto.condicion}
+        </p>
+
+        <strong className="product-price">
+          {producto.precio > 0
+            ? dinero.format(producto.precio)
+            : "Consultar precio"}
+        </strong>
+
+        {producto.precio > 0 ? (
+          <button onClick={onAdd}>
+            Agregar al carrito
+          </button>
+        ) : (
+          <a
+            className="consult-button"
+            href={enlaceConsulta(producto)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar por WhatsApp
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
+function CartDrawer({ items, accesorios, total, onClose, onChange, onWhatsApp }) { return <div className="drawer-backdrop" onClick={onClose}><aside className="cart-drawer" onClick={(e) => e.stopPropagation()}><button className="close" onClick={onClose}>×</button><p className="eyebrow">Tu pedido</p><h2>Carrito</h2>{items.length ? <><div className="cart-items">{items.map((item) => <div className="cart-item" key={item.id}><div><strong>{item.nombre}</strong>{item.condicion && <small>{item.condicion}</small>}{item.detalle && <small>{item.detalle}</small>}<span>{dinero.format(item.precio * item.cantidad)}</span></div>{accesorios.some((a) => a.id === item.id) && <div className="quantity"><button onClick={() => onChange(item.id, -1)}>−</button><b>{item.cantidad}</b><button onClick={() => onChange(item.id, 1)}>+</button></div>}</div>)}</div><div className="cart-total"><span>Total</span><strong>{dinero.format(total)}</strong></div><button className="whatsapp-button" onClick={onWhatsApp}>WhatsApp Business <span>↗</span></button></> : <p className="empty">Todavía no has agregado productos.</p>}<small className="availability">El pedido queda sujeto a confirmación de disponibilidad.</small></aside></div>; }
 export default App;
