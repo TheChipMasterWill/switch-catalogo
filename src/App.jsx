@@ -3,6 +3,7 @@ import "./App.css";
 import juegos from "./data/juegos.json";
 import { configuracionTienda, combos, memorias } from "./data/catalogo";
 import { productos, productosDisponibles, categoriasTienda } from "./data/productos";
+import { servicios, categoriasServicios } from "./data/servicios";
 import { construirPedido } from "./utils/pedido";
 
 function enlaceConsulta(producto) {
@@ -13,20 +14,28 @@ function enlaceConsulta(producto) {
 
 const dinero = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
 
+function paginaActual() {
+  if (window.location.hash.startsWith("#/catalogo")) return "catalogo";
+  if (window.location.hash.startsWith("#/servicios")) return "servicios";
+  return "tienda";
+}
+
 function App() {
-  const [pagina, setPagina] = useState(() => window.location.hash.startsWith("#/catalogo") ? "catalogo" : "tienda");
+  const [pagina, setPagina] = useState(paginaActual);
   const esCatalogo = pagina === "catalogo";
+  const esServicios = pagina === "servicios";
+  const [categoriaServicio, setCategoriaServicio] = useState("Todos");
   useEffect(() => {
     function actualizarPagina() {
-      setPagina(window.location.hash.startsWith("#/catalogo") ? "catalogo" : "tienda");
+      setPagina(paginaActual());
       window.scrollTo(0, 0);
     }
     window.addEventListener("hashchange", actualizarPagina);
     return () => window.removeEventListener("hashchange", actualizarPagina);
   }, []);
   useEffect(() => {
-    document.title = esCatalogo ? "Catálogo de juegos | TheChipMaster" : "Tienda TheChipMaster";
-  }, [esCatalogo]);
+    document.title = esCatalogo ? "Catálogo de juegos | TheChipMaster" : esServicios ? "Servicios | TheChipMaster" : "Tienda TheChipMaster";
+  }, [esCatalogo, esServicios]);
   const [combo, setCombo] = useState(null);
   const [memoria, setMemoria] = useState(null);
   const [seleccionados, setSeleccionados] = useState([]);
@@ -125,7 +134,8 @@ function App() {
         </a>
         <div className="nav-links">
           <a href="#/catalogo" aria-current={esCatalogo ? "page" : undefined}>Catálogo de juegos</a>
-          <a href="#/" aria-current={!esCatalogo ? "page" : undefined}>Tienda</a>
+          <a href="#/" aria-current={pagina === "tienda" ? "page" : undefined}>Tienda</a>
+          <a href="#/servicios" aria-current={esServicios ? "page" : undefined}>Servicios</a>
           <a className="youtube-button" href="https://www.youtube.com/@TheChipMasterWO" target="_blank" rel="noopener noreferrer" aria-label="TheChipMaster en YouTube (abre en una pestaña nueva)">
             <svg width="22" height="16" viewBox="0 0 24 18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23 3a3 3 0 0 0-2-2C18 0 6 0 3 1a3 3 0 0 0-2 2C0 6 0 12 1 15a3 3 0 0 0 2 2c3 1 15 1 18 0a3 3 0 0 0 2-2c1-3 1-9 0-12Z" /><path d="m10 5 6 4-6 4Z" fill="#b90016" /></svg>
             YouTube <span aria-hidden="true">↗</span>
@@ -135,9 +145,9 @@ function App() {
       </nav>
       <div className="hero-content">
         <p className="eyebrow">Nintendo Switch · Bogotá</p>
-        <h1>{esCatalogo ? "Catálogo de juegos" : "Tienda TheChipMaster"}</h1>
-        <p>{esCatalogo ? "Escoge tu combo y tu memoria, y elige los juegos para tu Switch." : "Encuentra consolas, controles, accesorios y repuestos en nuestra tienda."}</p>
-        <a className="primary-button" href={esCatalogo ? "#arma-tu-combo" : "#tienda"}>{esCatalogo ? "Escoge tu magia" : "Explora la tienda"} <span>↓</span></a>
+        <h1>{esCatalogo ? "Catálogo de juegos" : esServicios ? "Servicios TheChipMaster" : "Tienda TheChipMaster"}</h1>
+        <p>{esCatalogo ? "Escoge tu combo y tu memoria, y elige los juegos para tu Switch." : esServicios ? "Instalación de chip, mantenimiento de consolas y reparación de controles." : "Encuentra consolas, controles, accesorios y repuestos en nuestra tienda."}</p>
+        <a className="primary-button" href={esCatalogo ? "#arma-tu-combo" : esServicios ? "#servicios" : "#tienda"}>{esCatalogo ? "Escoge tu magia" : esServicios ? "Ver servicios" : "Explora la tienda"} <span>↓</span></a>
       </div>
       <div className="hero-orb orb-one" /><div className="hero-orb orb-two" />
     </header>
@@ -160,7 +170,13 @@ function App() {
       const motivoBloqueo = combo && !combo.cantidad ? "Sin juegos" : comboLleno ? "Combo lleno" : "Sin espacio";
       return <GameCard key={juego.id} juego={juego} seleccionado={seleccionado} onToggle={toggleJuego} bloqueado={bloqueado} motivoBloqueo={motivoBloqueo} />;
     })}</div></section>
-    </> : <>
+    </> : esServicios ? <section className="section store-section" id="servicios">
+      <div className="section-heading"><p className="eyebrow">Servicio técnico</p><h2>Cuida tu consola y tus controles</h2><p>Selecciona un servicio y escríbenos para confirmar precio, diagnóstico y disponibilidad de atención.</p></div>
+      <div className="store-filters">{categoriasServicios.map((categoria) => <button key={categoria} onClick={() => setCategoriaServicio(categoria)} aria-pressed={categoriaServicio === categoria} className={categoriaServicio === categoria ? "active" : ""}>{categoria}</button>)}</div>
+      <div className="products-grid">{servicios.filter((servicio) => categoriaServicio === "Todos" || servicio.categoria === categoriaServicio).map((servicio) => <article className="product-card" key={servicio.id}>
+        <div className="product-info"><span className="product-category">{servicio.categoria}</span><h3>{servicio.nombre}</h3><p>{servicio.descripcion}</p><strong className="product-price">Consultar precio</strong><a className="consult-button" href={enlaceConsulta(servicio)} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>
+      </article>)}</div>
+    </section> : <>
     <section className="section store-section" id="tienda">
       <div className="section-heading">
         <p className="eyebrow">Tienda TheChipMaster</p>
