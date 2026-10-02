@@ -245,7 +245,7 @@ export const productos = [
     precio: 25000,
     disponible: true,
     destacado: false,
-    imagen: "/productos/mica-switch.jpg",
+    imagen: "/productos/vidrio-templado.webp",
   },
 
 
