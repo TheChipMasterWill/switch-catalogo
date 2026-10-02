@@ -174,6 +174,7 @@ function App() {
       <div className="section-heading"><p className="eyebrow">Servicio técnico</p><h2>Cuida tu consola y tus controles</h2><p>Selecciona un servicio y escríbenos para confirmar precio, diagnóstico y disponibilidad de atención.</p></div>
       <div className="store-filters">{categoriasServicios.map((categoria) => <button key={categoria} onClick={() => setCategoriaServicio(categoria)} aria-pressed={categoriaServicio === categoria} className={categoriaServicio === categoria ? "active" : ""}>{categoria}</button>)}</div>
       <div className="products-grid">{servicios.filter((servicio) => categoriaServicio === "Todos" || servicio.categoria === categoriaServicio).map((servicio) => <article className="product-card" key={servicio.id}>
+        {servicio.imagen && <div className="product-image"><img src={`${import.meta.env.BASE_URL}${servicio.imagen.replace(/^\/+/, "")}`} alt={servicio.nombre} loading="lazy" /></div>}
         <div className="product-info"><span className="product-category">{servicio.categoria}</span><h3>{servicio.nombre}</h3><p>{servicio.descripcion}</p><strong className="product-price">Consultar precio</strong><a className="consult-button" href={enlaceConsulta(servicio)} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>
       </article>)}</div>
     </section> : <>

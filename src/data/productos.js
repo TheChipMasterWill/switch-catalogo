@@ -228,13 +228,13 @@ export const productos = [
 
   {
     id: "estuche-switch",
-    nombre: "Estuche protector para Switch",
+    nombre: "Kit estuche protector para Nintendo Switch 2",
     categoria: "Protección",
     condicion: "Nuevo",
-    precio: 45000,
+    precio: 69900,
     disponible: true,
     destacado: false,
-    imagen: "/productos/estuche-switch.jpg",
+    imagen: "/productos/estuche-switch.jpeg",
   },
 
   {
@@ -287,13 +287,13 @@ export const productos = [
 
   {
     id: "control-inalambrico",
-    nombre: "Control inalámbrico",
+    nombre: "Control RGB inalámbrico",
     categoria: "Accesorios",
     condicion: "Nuevo",
-    precio: 110000,
+    precio: 90000,
     disponible: true,
     destacado: false,
-    imagen: "/productos/control-inalambrico.jpg",
+    imagen: "/productos/control-inalambrico.jpeg",
   },
 
   {

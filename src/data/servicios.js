@@ -1,6 +1,6 @@
 // Edita aquí los servicios ofrecidos. Las cotizaciones se confirman por WhatsApp.
 export const servicios = [
-  { id: "chip-switch", nombre: "Instalación de chip para Nintendo Switch", categoria: "Instalación de chip", descripcion: "Servicio para Nintendo Switch normal, OLED y Lite. Consulta instalación y configuración." },
+  { id: "chip-switch", imagen: "/productos/instalacion-chip.jpeg", nombre: "Instalación de chip para Nintendo Switch", categoria: "Instalación de chip", descripcion: "Servicio para Nintendo Switch normal, OLED y Lite. Consulta instalación y configuración." },
   ...["Xbox 360", "Xbox One", "Xbox Series S", "Xbox Series X", "PS3", "PS4", "PS5"].flatMap((consola) => {
     const id = consola.toLowerCase().replaceAll(" ", "-");
     return [
