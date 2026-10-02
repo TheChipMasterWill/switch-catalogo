@@ -194,7 +194,7 @@ export const productos = [
     precio: 90000,
     disponible: true,
     destacado: false,
-    imagen: "/productos/microsd-128.jpg",
+    imagen: "/productos/microsd-128.webp",
   },
 
   {
@@ -206,7 +206,7 @@ export const productos = [
     precio: 160000,
     disponible: true,
     destacado: true,
-    imagen: "/productos/microsd-256.jpg",
+    imagen: "/productos/microsd-256.webp",
   },
 
   {
@@ -218,7 +218,7 @@ export const productos = [
     precio: 350000,
     disponible: true,
     destacado: false,
-    imagen: "/productos/microsd-512.jpg",
+    imagen: "/productos/microsd-512.webp",
   },
 
 
@@ -316,6 +316,17 @@ export const productos = [
     disponible: false,
     destacado: false,
     imagen: "/productos/adaptador-usb.jpg",
+  },
+
+  {
+    id: "bateria-switch-normal-oled",
+    nombre: "Batería para Nintendo Switch normal y OLED",
+    categoria: "Repuestos",
+    condicion: "Nueva",
+    precio: 150000,
+    disponible: true,
+    destacado: false,
+    imagen: "/productos/bateria-switch-normal-oled.webp",
   },
 
   // REPUESTOS DE CONSOLAS Y CONTROLES
