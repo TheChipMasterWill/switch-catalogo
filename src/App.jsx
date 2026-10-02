@@ -7,7 +7,7 @@ import { construirPedido } from "./utils/pedido";
 
 function enlaceConsulta(producto) {
   const telefono = configuracionTienda.whatsapp.replace(/\D/g, "");
-  const mensaje = `Hola, quisiera consultar el precio y la disponibilidad de ${producto.nombre} (${producto.condicion}) en ${configuracionTienda.nombre}.`;
+  const mensaje = `Hola, quisiera consultar el precio y la disponibilidad de ${producto.nombre}${producto.condicion ? ` (${producto.condicion})` : ""} en ${configuracionTienda.nombre}.`;
   return `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 }
 
@@ -136,7 +136,7 @@ function App() {
       <div className="hero-content">
         <p className="eyebrow">Nintendo Switch · Bogotá</p>
         <h1>{esCatalogo ? "Catálogo de juegos" : "Tienda TheChipMaster"}</h1>
-        <p>{esCatalogo ? "Escoge tu combo y tu memoria, y elige los juegos para tu Switch." : "Encuentra consolas, controles y accesorios para llevar tu Switch al siguiente nivel."}</p>
+        <p>{esCatalogo ? "Escoge tu combo y tu memoria, y elige los juegos para tu Switch." : "Encuentra consolas, controles, accesorios y repuestos en nuestra tienda."}</p>
         <a className="primary-button" href={esCatalogo ? "#arma-tu-combo" : "#tienda"}>{esCatalogo ? "Escoge tu magia" : "Explora la tienda"} <span>↓</span></a>
       </div>
       <div className="hero-orb orb-one" /><div className="hero-orb orb-two" />
@@ -164,10 +164,11 @@ function App() {
     <section className="section store-section" id="tienda">
       <div className="section-heading">
         <p className="eyebrow">Tienda TheChipMaster</p>
-        <h2>Consolas, controles y accesorios</h2>
+        <h2>{categoriaTienda === "Repuestos" ? "Repuestos de consolas y controles" : "Consolas, controles, accesorios y repuestos"}</h2>
         <p>
-          Encuentra consolas nuevas y de segunda mano, controles,
-          almacenamiento y accesorios para tu setup.
+          {categoriaTienda === "Repuestos"
+            ? "Encuentra piezas para tu consola o control. Consulta la compatibilidad con tu modelo antes de comprar."
+            : "Encuentra consolas nuevas y de segunda mano, controles, almacenamiento, accesorios y repuestos."}
         </p>
       </div>
 
@@ -196,11 +197,15 @@ function App() {
 
     {!productosFiltrados.length && (
       <div className="empty-store">
-        <h3>Próximamente</h3>
+        <h3>{categoriaTienda === "Repuestos" ? "Consulta el repuesto que necesitas" : "Próximamente"}</h3>
         <p>
-          Estamos actualizando nuestro inventario.
-          Escríbenos por WhatsApp para consultar disponibilidad.
+          {categoriaTienda === "Repuestos"
+            ? "Estamos preparando el catálogo de repuestos. Escríbenos con el modelo de tu consola o control y la pieza que buscas para consultar disponibilidad y precio."
+            : "Estamos actualizando nuestro inventario. Escríbenos por WhatsApp para consultar disponibilidad."}
       </p>
+        <a className="primary-button" href={enlaceConsulta({
+          nombre: categoriaTienda === "Repuestos" ? "un repuesto para mi consola o control" : "un producto",
+        })} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
     </div>
    )}
  </section>

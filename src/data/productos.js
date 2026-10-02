@@ -318,7 +318,12 @@ export const productos = [
     imagen: "/productos/adaptador-usb.jpg",
   },
 
+  // REPUESTOS DE CONSOLAS Y CONTROLES
+  // Agrega aquí cada pieza con un id único y categoria: "Repuestos".
+  // Usa nombre específico (pieza y modelo), condicion, precio, disponible e imagen.
+  // precio: 0 permite consultar por WhatsApp; disponible: false oculta la pieza.
+
 ];
-// Filtros compartidos: las categorías reflejan únicamente el inventario visible.
+// Las categorías se generan desde el inventario visible. Repuestos conserva su acceso mientras se carga el inventario.
 export const productosDisponibles = productos.filter((producto) => producto.disponible === true);
-export const categoriasTienda = ["Todos", ...new Set(productosDisponibles.map((producto) => producto.categoria))];
+export const categoriasTienda = ["Todos", ...new Set([...productosDisponibles.map((producto) => producto.categoria), "Repuestos"])];
